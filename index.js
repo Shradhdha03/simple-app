@@ -82,6 +82,6 @@ app.post('/api/checkout', validator_checkout, (req, res) => {
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname + '/front-end-app/build/index.html'));
 });
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3001;
 app.listen(port);
 console.log('App is listening on port ' + port);
