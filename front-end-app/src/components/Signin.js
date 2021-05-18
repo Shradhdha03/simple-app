@@ -72,10 +72,10 @@ class Signin extends Component {
 								<input type="checkbox" value="remember-me" name="remember_me" checked={this.state.remember_me} onChange={this.handleInputChange} /> Remember me
 							</label>
 						</div>
-						<button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+						<button id="submit-signin" className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
 					</form>)}
 
-					<div className="mt-3">
+					<div className="mt-3" id="result-message">
 						{(this.state.message ? (this.state.message.includes('[OK]') ? <div class="alert alert-success" role="alert">
 							{this.state.message}
 						</div> : <div class="alert alert-danger" role="alert">

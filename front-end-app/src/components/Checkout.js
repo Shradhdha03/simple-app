@@ -251,7 +251,7 @@ class Checkout extends Component {
 										<label className="form-check-label" htmlFor="save-info">Save this information for next time</label>
 									</div>
 									<br />
-									<button className="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+									<button id="submit-checkout" className="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
 
 									<br />	<br />	<br />	<br />
 								</form>
@@ -262,7 +262,7 @@ class Checkout extends Component {
 
 
 
-						<div className="mt-3">
+						<div className="mt-3" id="result-message">
 							{(this.state.message ? (this.state.message.includes('[OK]') ? <div class="alert alert-success" role="alert">
 								{this.state.message}
 							</div> : <div class="alert alert-danger" role="alert">
