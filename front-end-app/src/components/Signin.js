@@ -45,8 +45,7 @@ class Signin extends Component {
 	render() {
 		let errors = this.state.errors;
 		if (errors && errors.length) {
-			errors = errors.map((error, index) =>
-				<span key={index}><br />{error}</span>);
+			errors = this.state.errors.join(' ');
 		} else {
 			errors = '';
 		}
@@ -76,10 +75,10 @@ class Signin extends Component {
 					</form>)}
 
 					<div className="mt-3" id="result-message">
-						{(this.state.message ? (this.state.message.includes('[OK]') ? <div class="alert alert-success" role="alert">
+						{(this.state.message ? (this.state.message.includes('[OK]') ? <div class="alert alert-success" id="alert" role="alert">
 							{this.state.message}
-						</div> : <div class="alert alert-danger" role="alert">
-							{this.state.message}{errors}
+						</div> : <div class="alert alert-danger" id="alert" role="alert">
+							{this.state.message} {errors}
 						</div>) : '')}
 					</div>
 				</main>
